@@ -6,7 +6,7 @@ const Home = () => {
   const openLogin = () => {
     const auth = new Auth();
     auth.login();    
-  }
+  }  
 
   return(
     <>
