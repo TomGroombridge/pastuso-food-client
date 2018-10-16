@@ -4,11 +4,11 @@ import history from '../../history'
 export default class Auth {  
 
   public auth0 = new auth0.WebAuth({
-    clientID: 'U7TZy4Jgg3_uzhAv4r5eg20gN0alo-dg',
-    domain: 'paddington.eu.auth0.com',
-    redirectUri: 'http://localhost:3000/callback',
+    clientID: `${process.env.REACT_APP_AUTH_CLIENT_ID}`,
+    domain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
+    redirectUri: `${process.env.REACT_APP_AUTH_REDIRECT_URI}`,
     responseType: 'token id_token',
-    scope: 'openid'
+    scope: `${process.env.REACT_APP_AUTH_SCOPES}`
   }); 
 
   public handleAuthentication = () => {
@@ -28,8 +28,7 @@ export default class Auth {
     const expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
-    localStorage.setItem('expires_at', expiresAt);
-    // navigate to the home route
+    localStorage.setItem('expires_at', expiresAt);    
     history.replace('/');
   }
 
@@ -37,24 +36,18 @@ export default class Auth {
     // Clear Access Token and ID Token from local storage
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
-    localStorage.removeItem('expires_at');
-    // navigate to the home route
+    localStorage.removeItem('expires_at');    
     history.replace('/signedout');
   }
 
   public isAuthenticated = () => {
-    // Check whether the current time is past the 
-    // Access Token's expiry time    
-    const expiresAtItem = localStorage.getItem('expires_at') || '';
-    if (expiresAtItem === ''){
-      return false
-    };
+    // Check whether the current time is past the     
+    const expiresAtItem = localStorage.getItem('expires_at') || '{}';
     const expiresAt = JSON.parse(expiresAtItem);
     return new Date().getTime() < expiresAt;
   }
 
-  public login = () => {
-    console.log('logging in');
+  public login = () => {        
     this.auth0.authorize();
   }
 
