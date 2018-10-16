@@ -1,11 +1,9 @@
 import * as React from 'react'
-import Auth from '../Auth/auth';
 
-const Home = () => {
+const Home = (props: any) => {  
 
-  const openLogin = () => {
-    const auth = new Auth();
-    auth.login();    
+  const openLogin = () => {    
+    props.auth.login();    
   }  
 
   return(
