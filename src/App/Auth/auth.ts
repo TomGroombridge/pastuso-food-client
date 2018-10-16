@@ -1,7 +1,7 @@
 import * as auth0 from 'auth0-js';
 import history from '../../history'
 
-export default class Auth {
+export default class Auth {  
 
   public auth0 = new auth0.WebAuth({
     clientID: 'U7TZy4Jgg3_uzhAv4r5eg20gN0alo-dg',
@@ -33,24 +33,28 @@ export default class Auth {
     history.replace('/home');
   }
 
-  public logout = () => {
+  public logout = () => {    
     // Clear Access Token and ID Token from local storage
     localStorage.removeItem('access_token');
     localStorage.removeItem('id_token');
     localStorage.removeItem('expires_at');
     // navigate to the home route
-    history.replace('/home');
+    history.replace('/hello');
   }
 
   public isAuthenticated = () => {
     // Check whether the current time is past the 
-    // Access Token's expiry time
+    // Access Token's expiry time    
     const expiresAtItem = localStorage.getItem('expires_at') || '';
+    if (expiresAtItem === ''){
+      return false
+    };
     const expiresAt = JSON.parse(expiresAtItem);
     return new Date().getTime() < expiresAt;
   }
 
   public login = () => {
+    console.log('logging in');
     this.auth0.authorize();
   }
 
