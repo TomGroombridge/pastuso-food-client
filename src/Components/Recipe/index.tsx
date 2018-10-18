@@ -10,19 +10,18 @@ const Recipe = () => {
     <div className="columns">
       <div className="column is-one-quarter-tablet is-full-mobile">
         <div className="card">
-          <section className="section">            
-            <Image/>
+          <section className="section">                        
+            <h1 className="title has-text-centered">Lasagne</h1> 
+            <Image/>   
           </section>
-
-          <section className="section">            
-            <IngredientsList />            
+          <section className="section">       
+            <IngredientsList />                        
           </section>
         </div>
       </div>
       <div className="column is-three-quarters-tablet is-full-mobile">
       <div className="card">
-        <section className="section">
-          <h1 className="title has-text-centered">Lasagne</h1> 
+        <section className="section">          
           <RecipeDetails /> 
         </section>
       </div>
