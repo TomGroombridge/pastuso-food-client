@@ -11,6 +11,10 @@ const NavBar = (props: any) => {
     props.auth.logout();
   }
 
+  const redirectTo = (destination: string) => {
+    props.history.push(destination);
+  }
+
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
@@ -27,12 +31,12 @@ const NavBar = (props: any) => {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item">
+          <a className="navbar-item" onClick={() => redirectTo('/')}>
             Home
           </a>
 
-          <a className="navbar-item">
-            Documentation
+          <a className="navbar-item" onClick={() => redirectTo('/recipes')}>
+            Recipes
           </a>
 
           <div className="navbar-item has-dropdown is-hoverable">

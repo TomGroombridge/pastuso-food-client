@@ -1,11 +1,9 @@
 import * as React from 'react'
-import NavBar from '../../Components/NavBar';
 import Recipe from '../../Components/Recipe';
 
-const Home = (props: any) => {    
+const Home = () => {    
   return(
-    <>
-      <NavBar auth={props.auth}/>
+    <>      
       <section className="section">
         <Recipe />
       </section>
