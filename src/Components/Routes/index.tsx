@@ -3,7 +3,6 @@ import { Route, Router } from 'react-router-dom'
 import Auth from '../../App/Auth/auth';
 import Home from '../../App/Home'
 import history from '../../history';
-import '../../Styles/debug.css';
 import Callback from '../Callback';
 
 const auth = new Auth();
