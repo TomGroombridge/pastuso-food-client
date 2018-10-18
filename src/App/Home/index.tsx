@@ -1,12 +1,13 @@
 import * as React from 'react'
 import NavBar from '../../Components/NavBar';
+import Recipe from '../../Components/Recipe';
 
 const Home = (props: any) => {    
   return(
     <>
       <NavBar auth={props.auth}/>
       <section className="section">
-        <h1>This is a recipe</h1>        
+        <Recipe />
       </section>
     </>
   )
