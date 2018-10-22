@@ -1,30 +1,18 @@
 import * as React from 'react'
+import Recipe from '../../Components/Recipe';
 
-const Home = (props: any) => {  
-
-  const openLogin = () => {    
-    props.auth.login();    
-  }
-
-  const logout = () => {    
-    props.auth.logout();
-  }
-
-  const { isAuthenticated } = props.auth;
-
+const Home = () => {    
   return(
-    <>
-      <h1>This is the home page!</h1>
-      { 
-        isAuthenticated() && (
-          <button onClick={() => logout()}>Log out</button>    
-        )
-      }
-      { 
-        !isAuthenticated() && (
-          <button onClick={() => openLogin()}>Log in</button>
-        )
-      }      
+    <>      
+      <section className="section is-paddingless">        
+        <div className="columns">
+          <div className="column is-1 is-hidden-mobile"/>
+          <div className="column is-10 is-full-mobile">
+            <Recipe />
+          </div>
+          <div className="column is-1 is-hidden-mobile"/>
+        </div>        
+      </section>
     </>
   )
 }
