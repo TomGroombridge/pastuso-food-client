@@ -1,8 +1,20 @@
 import * as React from 'react';
+import RecipeTile from '../../Components/RecipeTile';
 
-const Recipes = () => {
+const Recipes = (props: any) => {  
   return(
-    <h1>This is the recipes</h1>
+    <section className="section">    
+      <div className="tile is-ancestor">
+        <div className="tile is-vertical is-12 ">
+          <div className="tile">
+            <RecipeTile history={props.history}/>
+            <RecipeTile history={props.history}/>
+            <RecipeTile history={props.history}/>
+            <RecipeTile history={props.history}/>            
+          </div>
+        </div>
+      </div>        
+    </section>
   )
 }
 

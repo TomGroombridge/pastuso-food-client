@@ -6,10 +6,10 @@ import RecipeDetails from './RecipeDetails';
 import RecipeMethod from './RecipeMethod';
 
 const Recipe = () => {
-  return(
+  return(    
     <div className="columns">
       <div className="column is-one-quarter-tablet is-full-mobile">
-        <div className="card">
+        <div>
           <section className="section">                        
             <h1 className="title has-text-centered">Lasagne</h1> 
             <Image/>   
@@ -20,7 +20,7 @@ const Recipe = () => {
         </div>
       </div>
       <div className="column is-three-quarters-tablet is-full-mobile">
-      <div className="card">
+      <div>
         <section className="section">          
           <RecipeDetails /> 
         </section>

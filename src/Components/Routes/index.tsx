@@ -9,6 +9,7 @@ import NavBar from '../NavBar';
 
 const auth = new Auth();
 
+
 const handleAuthentication = (nextState: any) => {
   if (/access_token|id_token|error/.test(nextState.location.hash)) {
     auth.handleAuthentication();
@@ -21,7 +22,8 @@ const Routes = () => {
       <div>
         <NavBar auth={auth} history={history}/>
         <Route path="/" exact={true} render={Home} /> 
-        <Route path="/recipes" exact={true} render={Recipes} />
+        <Route path="/recipes/:id" exact={true} render={Home} />
+        <Route path="/recipes" exact={true} render={Recipes} history={history}/>
         <Route path="/callback" render={(props: any) => {
           handleAuthentication(props);
           return <Callback/> 
