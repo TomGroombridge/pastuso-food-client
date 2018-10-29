@@ -15,7 +15,7 @@ class RecipePage extends React.Component<{}, {}> {
   render(){
     return(
       <>
-        <section className="section is-paddingless">
+        <section className="section">
           <div className="columns">
             <div className="column is-1 is-hidden-mobile"/>
             <div className="column is-10 is-full-mobile">
