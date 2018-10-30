@@ -2,4 +2,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #EDEDF0;
+}
+
+
+.recipe-details {
+  background: #00B9A7;
+}
+
+.recipe-card {
+  box-shadow: none;
+}
+
+.recipe-image {
+  padding: 1em 0.5em;
+}
+
+.navbar {
+  background: #00B9A7;
 }

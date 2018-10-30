@@ -1,13 +1,13 @@
 import * as React from 'react'
 
-const NavBar = (props: any) => {  
+const NavBar = (props: any) => {
   const { isAuthenticated } = props.auth;
 
-  const openLogin = () => {    
-    props.auth.login();    
+  const openLogin = () => {
+    props.auth.login();
   }
 
-  const logout = () => {    
+  const logout = () => {
     props.auth.logout();
   }
 
@@ -69,18 +69,18 @@ const NavBar = (props: any) => {
                   <div className="buttons">
                     <a className="button is-primary" onClick={() => logout()}>
                       <strong>Log out</strong>
-                    </a>                    
+                    </a>
                   </div>
-                )                
+                )
               }
               {
                 !isAuthenticated() && (
                   <div className="buttons">
                     <a className="button is-primary" onClick={() => openLogin()}>
                       <strong>Log in</strong>
-                    </a>                    
+                    </a>
                   </div>
-                )                
+                )
               }
           </div>
         </div>
