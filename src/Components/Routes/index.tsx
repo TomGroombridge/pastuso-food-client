@@ -6,6 +6,7 @@ import RecipePage from '../../App/Recipe'
 import Recipes from '../../App/Recipes';
 import history from '../../history';
 import Callback from '../Callback';
+import Footer from '../Footer';
 import NavBar from '../NavBar';
 
 const auth = new Auth();
@@ -29,6 +30,7 @@ const Routes = () => {
           handleAuthentication(props);
           return <Callback/>
         }}/>
+        <Footer />
       </div>
     </Router>
   )
