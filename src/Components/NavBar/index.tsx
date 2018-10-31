@@ -18,11 +18,11 @@ const NavBar = (props: any) => {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
-        <a className="navbar-item" href="/">
+        <a className="navbar-item" href="/" style={{color: '#FFF'}}>
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28"/>
         </a>
 
-        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" style={{color: '#FFF'}}>
           <span aria-hidden="true"/>
           <span aria-hidden="true"/>
           <span aria-hidden="true"/>
@@ -31,16 +31,16 @@ const NavBar = (props: any) => {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item" onClick={() => redirectTo('/')}>
+          <a className="navbar-item" onClick={() => redirectTo('/')} style={{color: '#FFF'}}>
             Home
           </a>
 
-          <a className="navbar-item" onClick={() => redirectTo('/recipes')}>
+          <a className="navbar-item" onClick={() => redirectTo('/recipes')} style={{color: '#FFF'}}>
             Recipes
           </a>
 
           <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">
+            <a className="navbar-link" style={{color: '#FFF'}}>
               More
             </a>
 

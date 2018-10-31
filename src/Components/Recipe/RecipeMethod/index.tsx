@@ -9,7 +9,7 @@ const RecipeMethod = (props: any) => {
           <h3>Method</h3>
           <ol type="1">
             {steps.map((step: any, index: any) =>
-              <li key={index}>{step.step_directions}</li>
+              <li key={index} style={{marginBottom: '1em'}}>{step.step_directions}</li>
             )}
           </ol>
         </div>

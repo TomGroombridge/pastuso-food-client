@@ -4,6 +4,7 @@ import Image from './Image';
 import IngredientsList from './IngredientsList';
 import RecipeDetails from './RecipeDetails';
 import RecipeMethod from './RecipeMethod';
+import RecipeMobileDetails from './RecipeMobileDetails';
 
 const Recipe = (props: any) => {
   const { recipe } = props;
@@ -12,6 +13,7 @@ const Recipe = (props: any) => {
       <div className="column is-one-quarter-tablet is-full-mobile">
         <div>
           <Image/>
+          <RecipeMobileDetails details={recipe.info.details}/>
           <section className="section">
             <IngredientsList components={recipe.info.recipe_components}/>
           </section>
