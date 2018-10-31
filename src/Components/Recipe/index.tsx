@@ -4,6 +4,7 @@ import Image from './Image';
 import IngredientsList from './IngredientsList';
 import RecipeDetails from './RecipeDetails';
 import RecipeMethod from './RecipeMethod';
+import RecipeMobileDetails from './RecipeMobileDetails';
 
 const Recipe = (props: any) => {
   const { recipe } = props;
@@ -11,10 +12,8 @@ const Recipe = (props: any) => {
     <div className="columns">
       <div className="column is-one-quarter-tablet is-full-mobile">
         <div>
-          <section className="section">
-            <h1 className="title has-text-centered">{recipe.info.name}</h1>
-            <Image/>
-          </section>
+          <Image/>
+          <RecipeMobileDetails details={recipe.info.details}/>
           <section className="section">
             <IngredientsList components={recipe.info.recipe_components}/>
           </section>
@@ -22,15 +21,9 @@ const Recipe = (props: any) => {
       </div>
       <div className="column is-three-quarters-tablet is-full-mobile">
       <div>
-        <section className="section">
-          <RecipeDetails details={recipe.info.details}/>
-        </section>
+        <RecipeDetails details={recipe.info.details}/>
       </div>
-      <div className="card">
-        <section className="section">
-          <RecipeMethod steps={recipe.info.steps}/>
-        </section>
-      </div>
+      <RecipeMethod steps={recipe.info.steps}/>
       </div>
     </div>
   )

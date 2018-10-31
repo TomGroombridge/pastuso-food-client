@@ -3,9 +3,9 @@
     "name": "Lasagne",
     "details": {
       "serves": 8,
-      "prep_time": "1h",
-      "cook_time": "3h, 10m",
-      "difficulty": "easy"
+      "prep_time": "1H",
+      "cook_time": "3H, 10M",
+      "difficulty": "EASY"
     },
     "tags": [
       {"id": 1, "name": "Heart Warming"},
