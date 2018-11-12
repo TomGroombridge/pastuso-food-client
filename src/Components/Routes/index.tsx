@@ -4,6 +4,7 @@ import Auth from '../../App/Auth/auth';
 // import Home from '../../App/Home';
 import RecipePage from '../../App/Recipe'
 import Recipes from '../../App/Recipes';
+import RecipesSteps from '../../App/RecipesSteps';
 import history from '../../history';
 import Callback from '../Callback';
 import Footer from '../Footer';
@@ -30,6 +31,7 @@ const Routes = () => {
         <Route path="/" exact={true} render={Recipes} history={history}/>
         <Route path="/recipes/:id" exact={true} component={RecipePage}/>
         <Route path="/recipes" exact={true} render={Recipes} history={history}/>
+        <Route path="/recipes/:id/steps" exact={true} render={RecipesSteps} history={history}/>
         <Route path="/callback" render={(props: any) => {
           handleAuthentication(props);
           return <Callback/>
