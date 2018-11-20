@@ -3,7 +3,7 @@ import { Route, Router } from 'react-router-dom'
 import Auth from '../../App/Auth/auth';
 import RecipePage from '../../App/Recipe'
 import Recipes from '../../App/Recipes';
-import RecipesSteps from '../../App/RecipesSteps';
+import RecipesSteps from '../../App/RecipesSteps/container';
 import history from '../../Redux/generateHistory';
 import Callback from '../Callback';
 import Footer from '../Footer';
@@ -23,7 +23,6 @@ const handleAuthentication = (nextState: any) => {
 }
 
 const Routes = () => {
-  console.log('route history', history);
   return(
     <Router history={history}>
       <div>
@@ -31,7 +30,7 @@ const Routes = () => {
         <Route path="/" exact={true} render={Recipes} history={history}/>
         <Route path="/recipes/:id" exact={true} component={RecipePage}/>
         <Route path="/recipes" exact={true} render={Recipes} history={history}/>
-        <Route path="/recipes/:id/steps" exact={true} render={RecipesSteps} history={history}/>
+        <Route path="/recipes/:id/steps" exact={true} component={RecipesSteps}/>
         <Route path="/callback" render={(props: any) => {
           handleAuthentication(props);
           return <Callback/>

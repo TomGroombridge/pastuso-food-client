@@ -11,6 +11,7 @@
     "no-console": false,
     "prefer-const": true,
     "jsx-no-lambda": false,
-    "member-access": [false, "no-public"]
+    "member-access": [false, "no-public"],
+    "object-literal-sort-keys": false
   }
 }
