@@ -7,7 +7,6 @@ import {
 
 export function* fetchRecipeSaga(){
   try {
-    console.log('loading the saga!!!');
     yield put({ type: LOADING, payload: true });
   } catch {
     yield put({ type: LOADING, payload: false });

@@ -9,7 +9,6 @@ const initialState: ILoadingState = {
 }
 
 export default function(state = initialState, action: any) {
-  console.log('action type', action.type);
   switch (action.type) {
     case LOADING: {
       return {

@@ -5,7 +5,7 @@ import {
 } from './actionCreators';
 
 const mapStateToProps = (state: any) => ({
-
+  isLoading: state.loader.isLoading,
 });
 
 const mapDispatchToProps = {

@@ -8,6 +8,8 @@ export default class RecipesSteps extends React.Component<any, any> {
   }
 
   render(){
+    const {isLoading} = this.props;
+    console.log('is loading', isLoading);
     return(
       <section className="section">
         <div className="columns">
