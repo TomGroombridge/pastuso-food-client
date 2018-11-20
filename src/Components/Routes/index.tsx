@@ -1,11 +1,10 @@
 import * as React from 'react'
 import { Route, Router } from 'react-router-dom'
 import Auth from '../../App/Auth/auth';
-// import Home from '../../App/Home';
 import RecipePage from '../../App/Recipe'
 import Recipes from '../../App/Recipes';
 import RecipesSteps from '../../App/RecipesSteps';
-import history from '../../history';
+import history from '../../Redux/generateHistory';
 import Callback from '../Callback';
 import Footer from '../Footer';
 import NavBar from '../NavBar';
@@ -24,6 +23,7 @@ const handleAuthentication = (nextState: any) => {
 }
 
 const Routes = () => {
+  console.log('route history', history);
   return(
     <Router history={history}>
       <div>
