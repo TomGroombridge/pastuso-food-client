@@ -1,15 +1,16 @@
-import { takeLatest } from 'redux-saga/effects';
-// put,
+import { put, takeLatest } from 'redux-saga/effects';
+import { LOADING } from '../Loader/actionTypes';
+
 import {
   FETCH_RECIPE
 } from './actionTypes';
 
-export function fetchRecipeSaga(){
+export function* fetchRecipeSaga(){
   try {
     console.log('loading the saga!!!');
-    // yield put({ type: LOADING, payload: true });
+    yield put({ type: LOADING, payload: true });
   } catch {
-    // yield put({ type: LOADING, payload: false });
+    yield put({ type: LOADING, payload: false });
   }
 }
 
