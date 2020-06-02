@@ -4,13 +4,16 @@
     "exclude": [
       "config/**/*.js",
       "node_modules/**/*.ts",
-      "coverage/lcov-report/*.js"
+      "coverage/lcov-report/*.js",
+      "*.json",
+      "**/*.json"
     ]
   },
   "rules": {
     "no-console": false,
     "prefer-const": true,
     "jsx-no-lambda": false,
-    "member-access": [false, "no-public"]
+    "member-access": [false, "no-public"],
+    "object-literal-sort-keys": false
   }
 }

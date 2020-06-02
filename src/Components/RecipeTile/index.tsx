@@ -12,12 +12,12 @@ const RecipeTile = ({history}: any) => {
         </div>
         <div className="card-content">
           <p className="title is-4">Lasagne</p>
-          <p className="subtitle is-6">
+          <div className="subtitle is-6">
             <div className="tags">
               <span className="tag">Family Favourite</span>
               <span className="tag">Freezable</span>
             </div>
-          </p>
+          </div>
         </div>
       </div>
     </div>
